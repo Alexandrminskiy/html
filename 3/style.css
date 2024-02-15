@@ -6,3 +6,7 @@ label{
     width: 80px;
     display: inline-block;
 }
+
+fieldset {
+    margin-bottom: 20px;
+}
