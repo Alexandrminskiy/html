@@ -1,0 +1,77 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Roboto;
+    background: #fffded;
+}
+
+.container {
+    margin: 0 150px;
+}
+
+.main-title {
+    padding: 55px 0;
+    margin-top: 56px;
+    text-align: center;
+    color: #753C20;
+    text-transform: uppercase;
+    font-weight: 700;
+
+}
+
+.block {
+    display: flex;
+    margin-bottom: 55px;
+}
+
+img {
+    width: 400px;
+    height: 300px;
+}
+
+.block-text {
+    margin: 0 55px;
+}
+
+.title {
+    margin-bottom: 55px;
+    text-align: center;
+    font-size: 36px;
+    color: #D89B82;
+    font-weight: 300;
+}
+
+.text {
+    font-family: "Roboto";
+    color: #000000;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 300;
+
+}
+
+.join-title {
+    margin-bottom: 34px;
+    font-size: 36px;
+    color: #E78326;
+    text-align: center;
+    line-height: 42.19px;
+    font-weight: 700;
+
+}
+
+.join-text {
+    margin-bottom: 55px;
+    font-size: 24px;
+    color: #000000;
+    line-height: 28.13px;
+    text-align: center;
+    font-weight: 400;
+}
+
+.email {
+    color: #E78326;
+}
