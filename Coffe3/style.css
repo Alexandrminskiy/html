@@ -30,33 +30,35 @@ img {
     color: #E6D5B9;
 }
 
-.container {
-    padding-left: 100px;
-    padding-top: 50px;
-}
+.container {}
 
 .block {
     display: flex;
-
+    margin: 50px 150px;
 }
 
-.block-text-left {
-    margin: 20px;
-}
+.block-text-left {}
 
-.block-text-right {
-    margin: 20px;
-
-}
+.block-text-right {}
 
 .block-title {
-    margin: 20px;
+    margin: 50px;
+    margin-top: 0;
+    font-size: 36px;
+    color: #4E3835;
 
 }
 
-.right {}
+.right {
+    text-align: right;
+}
 
-.block-description {}
+.block-description {
+    margin-left: 50px;
+    margin-right: 50px;
+    color: #4E3833;
+    font-size: 18px;
+}
 
 .line {
     width: 184px;
@@ -64,8 +66,3 @@ img {
     background-color: #4E3835;
     margin: 50px auto;
 }
-
-
-
-
-/* https://stepik.org/lesson/585358/step/8?unit=580117 */
