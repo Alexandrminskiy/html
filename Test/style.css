@@ -1,0 +1,6 @@
+p {
+    background: #009688;
+    width: 60px;
+    word-break: break-word;
+    display: flex;
+}
