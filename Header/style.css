@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.wraper {}
+
+.header {
+    background: #dedbff;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.logo {}
+
+.brand {}
+
+.nav {}
+
+.header-btn {}
+
+.header-ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
