@@ -8,25 +8,51 @@
 .header {
     background: #dedbff;
     display: flex;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
+    padding: 15px;
     justify-content: space-between;
     align-items: center;
+    
+}
 
+li, a{
+    text-decoration: none;
+    color: #000;
 }
 
 .logo {}
 
-.brand {}
+.brand {
+    color: #05A88D;
+    font-weight: 700;
+    font-size: 24px;
+}
 
 .nav {}
 
-.header-btn {}
+.header-btn {
+  display: flex;
+  gap: 20px;
+}
 
-.header-ul {
+.btn_sign_up {
+    border: #05A88D solid 1px;
+    padding: 10px;
+    border-radius: 3px;
+    color: #05A88D;
+    background: #dedbff;
+    display: flex;
+}
+
+.btn_login {
+    padding: 10px;
+    display: flex;
+    color: #05A88D;
+}
+
+.header-ul{
     list-style: none;
     display: flex;
     justify-content: space-between;
     gap: 20px;
+    text-decoration: none;
 }
