@@ -35,18 +35,23 @@ body {
     font-size: 36px;
     text-align: center;
     font-weight: 700;
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    line-height: normal;
 }
 
 .logo_link {
     text-decoration: none;
     color: #000;
+    text-shadow: hoff voff blur #000;
+
 }
 
 .li_menu {
     display: flex;
     font-size: 24px;
     text-align: center;
-   
+
 }
 
 .menu__link {
