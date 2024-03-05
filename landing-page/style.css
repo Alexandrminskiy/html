@@ -10,7 +10,8 @@ body {
 .header {
     width: 100%;
     box-sizing: border-box;
-    background: #ffdddd;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    background: rgb(255, 255, 255);
 }
 
 .menu {
@@ -34,16 +35,17 @@ body {
     text-transform: uppercase;
     font-size: 36px;
     text-align: center;
-    font-weight: 700;
     font-family: "Oswald", sans-serif;
     font-weight: 500;
     line-height: normal;
+
+
 }
 
 .logo_link {
     text-decoration: none;
     color: #000;
-    text-shadow: hoff voff blur #000;
+    text-shadow: 0 4px 4px #ffffff;
 
 }
 
@@ -51,7 +53,9 @@ body {
     display: flex;
     font-size: 24px;
     text-align: center;
-
+    font-family: Oswald;
+    font-weight: 300;
+    letter-spacing: 0%;
 }
 
 .menu__link {
@@ -59,5 +63,34 @@ body {
     margin-left: 46px;
     text-decoration: none;
     text-transform: uppercase;
-    font-weight: 500;
+
+}
+
+.container {}
+
+.home {
+    position: relative;
+}
+
+.home_img {
+    width: 100%;
+    height: auto;
+}
+
+.text_home {
+    text-align: center;
+    text-transform: uppercase;
+    color: rgb(255, 255, 255);
+    font-family: Oswald;
+    font-size: 60px;
+    font-weight: 700;
+    left: 0;
+    top: 50%;
+    width: 100%;
+    position: absolute;
+}
+
+.line_home {
+    width: 80px;
+    border-bottom: #4E3835 solid 6px;
 }
