@@ -84,13 +84,81 @@ body {
     font-family: Oswald;
     font-size: 60px;
     font-weight: 700;
-    left: 0;
+    /* left: 0; */
     top: 50%;
     width: 100%;
     position: absolute;
+    text-decoration: underline;
+    text-underline-offset: 24px;
+    text-decoration-thickness: 10px;
+    text-decoration-color: #4E3835;
+
 }
 
-.line_home {
-    width: 80px;
-    border-bottom: #4E3835 solid 6px;
+.line_home {}
+
+.story {
+    /* display: flex;
+    justify-content: space-between; */
+}
+
+.block_story {
+    display: flex;
+}
+
+.text_logo_story {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Oswald;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 53px;
+    text-transform: uppercase;
+    margin-top: 60px;
+    margin-bottom: 69px;
+
+}
+
+.text_story {
+    margin-top: 110px;
+    margin-right: 123px;
+    font-family: Oswald;
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.img_story {
+    margin-left: 82px;
+    margin-bottom: 59px;
+    margin-right: 40px;
+}
+
+.imgStory {
+    max-width: 600px;
+    height: auto;
+}
+
+.blog {
+    background: rgb(239, 239, 239);
+    height: 711px;
+
+}
+
+.block_blog {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.contact {
+    height: 337px;
+    background: rgb(129, 112, 112);
+}
+
+.footer {
+    height: 72px;
+
 }
