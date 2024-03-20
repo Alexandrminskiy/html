@@ -1,8 +1,9 @@
-let btn = document.querySelector('.btn');
-let firstN = document.querySelector('[name="firstN"]');
-let secondN = document.querySelector('[name="secondN"]');
-let res = document.querySelector('.res');
+let nameQ = document.querySelector('[name="names"]');
+let famyli = document.querySelector('.family-input');
+let btn = document.querySelector('.form-button');
+let res = document.querySelector('.res')
 
-btn.addEventListener('click', ()=>{
-    res.textContent = +firstN.value + +secondN.value;
+btn.addEventListener('click', () => {
+    res.textContent = (` ${famyli.value}  ${nameQ.value}`);
 })
+
