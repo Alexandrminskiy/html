@@ -2,6 +2,7 @@
 /* .inp {border-color: red;} */
 .inp {
     border: 3px solid;
+<<<<<<< HEAD
 }
 
 .form {
@@ -30,4 +31,6 @@
 
 .form-button {
     padding: 5px 0;
+=======
+>>>>>>> ba1f27849e47db7c74ab78bce5777f0669841269
 }
