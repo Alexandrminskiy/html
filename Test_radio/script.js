@@ -1,12 +1,17 @@
 let btn = document.querySelector('.btn');
 let result = document.querySelector('.result');
-let radioBottons = document.querySelectorAll('[name="conact"]');
+let checks = document.querySelectorAll('[name="contact"]');
 
 btn.addEventListener('click', () => {
-    let selectContactValue = '';
-    for (const radioBtn of radioBottons) {
-       
-        console.log(radioBtn);
+    let select = [];
+    for (const checkBtn of checks) {
+        if (checkBtn.checked) {
+            select.push(checkBtn.value)
+        }
     }
-
+    if (select != 0) {
+        result.textContent = select.join(', ');
+    } else {
+        result.textContent = 'ни чешго не выбрано';
+    }
 })

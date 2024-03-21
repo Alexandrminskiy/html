@@ -10,24 +10,21 @@
 
 <body>
     <p class="title">Выберете способ связи:</p>
-    <div><input type="radio" name="contact" id="contactChoice1" value="email">
+    <div><input type="checkbox" name="contact" id="contactChoice1" value="email">
         <label for="contactChoice1">по E-mail:</label>
     </div>
 
-    <div><input type="radio" name="contact" id="contactChoice2" value="phone">
+    <div><input type="checkbox" name="contact" id="contactChoice2" value="phone">
         <label for="contactChoice2">по Телефону</label>
     </div>
 
     <div>
-        <input type="radio" name="contact" id="contactChoice3" value="mail">
+        <input type="checkbox" name="contact" id="contactChoice3" value="mail">
         <label for="contactChoice3">по Почте</label>
     </div>
 
     <button class="btn">Отправить</button>
-    <p class="result">Выбраный способ:</p>
-
-
-
+    <p>Выбраный способ: <span class="result"></span></p>
 
 </body>
 <script src="./script.js"></script>
