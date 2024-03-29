@@ -1,0 +1,85 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Oswald;
+}
+
+.title {
+    text-align: center;
+    padding: 20px;
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: 500;
+    line-height: 53px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.container {
+    background-color: rgb(129, 112, 112);
+    /* display: flex; */
+    /* justify-content: space-between; */
+    padding: 50px;
+}
+
+.wrapper-input {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.wrapper-checkbox-left {}
+
+.input-names {
+    display: flex;
+    justify-content: center;
+
+}
+
+.input-name {
+    margin-right: 32px;
+    padding: 8px 18px;
+    text-align: center;
+}
+
+.input-surname {
+    margin-left: 32px;
+    padding: 8px 18px;
+    text-align: center;
+}
+
+.wrapper-check {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+.input-value {
+    margin: 10px;
+    padding: 12px;
+    border: white solid 3px;
+    border-radius: 8px;
+    /* background: rgb(129, 112, 112); */
+    width: 30px;
+    color: #ffffff;
+}
+
+.checkbox-input {
+    transform: scale(2.5);
+    margin-right: 15px;
+    position: absolute;
+}
+
+.label-input {
+    font-size: 26px;
+    font-weight: 300;
+    line-height: 30px;
+    color: white;
+    padding-left: 50px;
+    padding-right: 20px;
+}
