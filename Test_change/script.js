@@ -5,7 +5,6 @@ let select = [];
 btn.forEach(e => {
     e.addEventListener('change', () => {
         if (e.checked) {
-            console.log(e.type);
             select.push(e.value);
         } else {
             select.splice(select.indexOf(e.value), 1)

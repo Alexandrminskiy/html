@@ -42,13 +42,13 @@
 
 .input-name {
     margin-right: 32px;
-    padding: 8px 18px;
+    padding: 8px 45px;
     text-align: center;
 }
 
 .input-surname {
     margin-left: 32px;
-    padding: 8px 18px;
+    padding: 8px 45px;
     text-align: center;
 }
 
@@ -82,4 +82,27 @@
     color: white;
     padding-left: 50px;
     padding-right: 20px;
+}
+
+.result {
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 20px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.place {
+    color: rgb(129, 112, 112);
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.btn {
+    margin-top: 20px;
+    width: 190px;
+    height: 55px;
 }
