@@ -33,13 +33,13 @@
                 <div class="wrapper-check">
                     <input class="checkbox-input" type="checkbox" name="coffe" id="k1" value="80">
                     <label class="label-input" for="k1">Эспрессо 80р.</label>
-                    <input class="input-value" name="coffe" type="number"  id="k1" placeholder="0" >
+                    <input class="input-value" name="coffe" type="text" id="k1" value="0">
                 </div>
 
                 <div class="wrapper-check">
                     <input class="checkbox-input" type="checkbox" name="coffe" id="k2" value="110">
                     <label class="label-input" for="k2">Американо 110р.</label>
-                    <input class="input-value" type="number" name="coffe" id="k2" placeholder="0">
+                    <input class="input-value" type="number" name="coffe" id="k2" value="0">
                 </div>
                 <div class="wrapper-check">
                     <input class="checkbox-input" type="checkbox" name="coffe" id="k3" value="120">
@@ -48,38 +48,112 @@
                 </div>
 
                 <div class="wrapper-check">
-                    <input class="checkbox-input" type="checkbox" name="coffe" id="">
+                    <input class="checkbox-input" type="checkbox" name="coffe" id="" value="90">
                     <label class="label-input" for="coffe">Капучино 90р.</label>
                     <input type="number" name="" id="" placeholder="0" class="input-value">
                 </div>
             </div>
             <div class="wrapper-checkbox-right">
                 <div class="wrapper-check">
-                    <input class="checkbox-input" type="checkbox" name="coffe" id="">
+                    <input class="checkbox-input" type="checkbox" name="coffe" id="" value="80">
                     <label class="label-input" for="coffe">Шоколадный кекс 80р.</label>
                     <input type="number" name="" id="" placeholder="0" class="input-value">
                 </div>
 
                 <div class="wrapper-check">
-                    <input class="checkbox-input" type="checkbox" name="coffe" id="">
+                    <input class="checkbox-input" type="checkbox" name="coffe" id="" value="90">
                     <label class="label-input" for="coffe">Черничный кекс 90р.</label>
                     <input type="number" name="" id="" placeholder="0" class="input-value">
                 </div>
 
                 <div class="wrapper-check">
-                    <input class="checkbox-input" type="checkbox" name="coffe" id="">
+                    <input class="checkbox-input" type="checkbox" name="coffe" id="" value="100">
                     <label class="label-input" for="coffe">Яблочный тарт 100р.</label>
                     <input type="number" name="" id="" placeholder="0" class="input-value">
                 </div>
             </div>
         </div>
 
-       <p class="result"><span>Итого: р.</span></p>
+        <p class="resultat">Итого: <span class="result"></span>р.</p>
         <div class="place">
             <button class="btn">оформить заказ</button>
         </div>
     </div>
+<!-- 
+    <input type="checkbox" value="10" onclick="updatePurchaseCount()">Product 1</input><br>
+    <label for="purchaseCount">Manual Purchase Count:</label>
+    <input type="number" id="purchaseCount" value="0" oninput="updatePurchaseCount()"></input><br>
+    
+    <label for="totalAmount">Total Amount:</label>
+    <input type="number" id="totalAmount" value="0" readonly></input>
 
+    <script>
+        function updatePurchaseCount() {
+            var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+            var manualCount = +(document.getElementById('purchaseCount').value);
+            var totalCount = manualCount;
+            var totalAmount = 0;
+
+            checkboxes.forEach((checkbox)=> {
+                totalAmount += +(checkbox.value);
+            });
+
+            totalAmount *= totalCount;
+
+            document.getElementById('totalAmount').value = totalAmount;
+        }
+    </script>
+    </script> -->
+<!-- Предположим, что у нас есть список товаров -->
+<form id="orderForm">
+    <!-- Пример товара -->
+    <div class="product">
+      <label>Товар:</label>
+      <input type="checkbox" id="productCheckbox" name="productCheckbox">
+      <label for="productCheckbox">Товар X</label><br>
+      <label>Количество:</label>
+      <input type="number" id="productQuantity" name="productQuantity" min="0" value="0">
+    </div>
+    
+    <!-- Другие товары... -->
+  </form>
+  
+  <!-- Строка "Итого" -->
+  <div id="total">Итого: <span id="totalAmount">0</span></div>
+  
+  <script>
+  // Получаем элементы формы
+  const orderForm = document.getElementById('orderForm');
+  const productCheckbox = document.getElementById('productCheckbox');
+  const productQuantity = document.getElementById('productQuantity');
+  const totalAmountSpan = document.getElementById('totalAmount');
+  
+  // Функция для обновления итоговой суммы
+  function updateTotal() {
+    const quantity = parseInt(productQuantity.value, 10) || 0; // Преобразуем значение в число, если возможно, иначе берем 0
+    const isChecked = productCheckbox.checked;
+  
+    if (isChecked) {
+      totalAmountSpan.textContent = String(quantity); // Если чекбокс отмечен, показываем количество
+    } else {
+      totalAmountSpan.textContent = '0'; // Если чекбокс не отмечен, показываем 0
+    }
+  }
+  
+  // Обработчик события изменения количества товара
+  productQuantity.addEventListener('change', updateTotal);
+  
+  // Обработчик события клика на чекбоксе
+  productCheckbox.addEventListener('click', function() {
+    productQuantity.value = this.checked ? '1' : '0'; // Устанавливаем значение поля количества в 1, если чекбокс отмечен, иначе в 0
+    updateTotal(); // Обновляем итоговую сумму
+  });
+  
+  // Инициализируем отображение итоговой суммы
+  updateTotal();
+  </script>
+  
+    
 </body>
 <script src="./script.js"></script>
 

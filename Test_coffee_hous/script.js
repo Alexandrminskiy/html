@@ -1,22 +1,14 @@
-// let checkBtn = document.querySelectorAll('[name="coffe"]');
+let checkBtn = document.querySelectorAll('[name="coffe"]');
 let result = document.querySelector('.result');
-let select = [];
-// let total = 0;
+let count = document.querySelector('.input-value')
 
-function updateTotal() {
-    var checkboxes = document.querySelectorAll('[name="coffe"]');
-    var total = 0;
-    checkboxes.forEach(function (checkbox) {
+document.addEventListener('change', () => {
+    let total = 0;
+    for (const checkbox of checkBtn) {
         if (checkbox.checked) {
             total += +(checkbox.value);
         }
-    });
-    document.querySelector('.result').textContent = total;
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    var checkboxes = document.querySelectorAll('[name="coffe"]');
-    checkboxes.forEach(function(checkbox) {
-        checkbox.addEventListener('change', updateTotal);
-    });
-})
+    }
+    result.textContent = total
+    count.textContent=total.value
+});
