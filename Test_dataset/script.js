@@ -5,6 +5,7 @@ const choiseGood = { value: "", price: 0, size: "", };
 
 btn.addEventListener('click', () => {
     radioElement.forEach(e => {
+        console.log(e.dataset.size);
         if (e.checked) {
             choiseGood.value = e.value;
             choiseGood.price = +(e.dataset.price);
