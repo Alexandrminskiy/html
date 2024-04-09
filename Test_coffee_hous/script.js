@@ -1,7 +1,6 @@
 let checkBtn = document.querySelectorAll('[name="coffe"]');
 let result = document.querySelector('.result');
-let inputCount = document.querySelectorAll('.input-value');
-// let inputCount = document.querySelectorAll('.count');
+let inputCount = document.querySelectorAll('.input-count');
 
 let user = {
     firstName: "",
@@ -9,16 +8,13 @@ let user = {
     amount: 0,
 }
 
-
-function calcAmount() {
+calcAmount = () => {
     let total = 0;
-    for (let j = 0; j < checkBtn.length; j++) {
-        if (checkBtn[j].checked) {
-            total += +(checkBtn[j].dataset.price) * +(inputCount[j].value)
-            // console.log(checkBtn[j].dataset.price);
-            // console.log(inputCount[j].value);
+    checkBtn.forEach((e, i) => {
+        if (e.checked) {
+            total += +(e.dataset.price) * +(inputCount[i].value)
         }
-    }
+    })
     return total
 }
 
@@ -44,15 +40,3 @@ for (let i = 0; i < inputCount.length; i++) {
 document.addEventListener("click", () => {
     user.amount = document.querySelector(".result").textContent;
 })
-
-// document.addEventListener('change', () => {
-//     let total = 0;
-//     for (const e of checkBtn) {
-//         if (e.checked) {
-//             total += +(e.value);
-//             calcAmount()
-//         }
-//     }
-//     result.textContent = total
-// });
-
