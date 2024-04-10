@@ -18,7 +18,7 @@ calcAmount = () => {
     return total
 }
 
-for (let i = 0; i < checkBtn.length; i++) {
+checkBtn.forEach((e, i) => {
     checkBtn[i].addEventListener('change', () => {
         if (checkBtn[i].checked) {
             inputCount[i].value = 1;
@@ -29,7 +29,8 @@ for (let i = 0; i < checkBtn.length; i++) {
         user.amount = calcAmount();
         result.textContent = user.amount;
     })
-}
+})
+
 for (let i = 0; i < inputCount.length; i++) {
     inputCount[i].addEventListener('change', () => {
         user.amount = calcAmount();
