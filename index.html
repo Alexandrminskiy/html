@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Крестики-Нолики</title>
+    <style>
+        .cell {
+            width: 50px;
+            height: 50px;
+            border: 1px solid black;
+            font-size: 24px;
+            text-align: center;
+            line-height: 50px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="game"></div>
+
+    <script>
+        // Функция для создания новой игры
+        function newGame() {
+            const game = document.getElementById('game');
+            game.innerHTML = ''; // Очистка предыдущей игры
+
+            // Создание сетки 3x3
+            for (let i = 0; i < 3; i++) {
+                const row = document.createElement('div');
+                row.className = 'row';
+                game.appendChild(row);
+                for (let j = 0; j < 3; j++) {
+                    const cell = document.createElement('div');
+                    cell.className = 'cell';
+                    cell.id = `cell-${i}-${j}`;
+                    row.appendChild(cell);
+                }
+            }
+        }
+
+        // Функция для проверки победы
+        function checkWin(player) {
+            // Проверка горизонтальных линий
+            if ((board[0] === player && board[1] === player && board[2] === player) ||
+                (board[3] === player && board[4] === player && board[5] === player) ||
+                (board[6] === player && board[7] === player && board[8] === player)) {
+                return true;
+            }
+            // Проверка вертикальных линий
+            if ((board[0] === player && board[3] === player && board[6] === player) ||
+                (board[1] === player && board[4] === player && board[7] === player) ||
+                (board[2] === player && board[5] === player && board[8] === player)) {
+                return true;
+            }
+            // Проверка диагоналей
+            if ((board[0] === player && board[4] === player && board[8] === player) ||
+                (board[2] === player && board[4] === player && board[6] === player)) {
+                return true;
+            }
+            return false;
+        }
+
+        // Функция для обработки хода игрока
+        function handlePlayerMove(cellId) {
+            const cell = document.getElementById(cellId);
+            if (cell.innerText === '') {
+                cell.innerText = playerSymbol;
+                // Обновление состояния игры
+                switch (playerSymbol) {
+                    case 'X':
+                        playerSymbol = 'O';
+                        break;
+                    case 'O':
+                        playerSymbol = 'X';
+                        break;
+                }
+                // Проверка на победу
+                if (checkWin(playerSymbol)) {
+                    alert(`Победил игрок ${playerSymbol}`);
+                    newGame();
+                } else {
+                    computerMove();
+                }
+            }
+        }
+
+        // Функция для обработки хода компьютера
+        function computerMove() {
+            let bestCellId;
+            // Проходим по всем клеткам
+            for (let i = 0; i < 9; i++) {
+                const cellId = `cell-${Math.floor(i / 3)}-${i % 3}`;
+                const cell = document.getElementById(cellId);
+                if (cell.innerText === '') {
+                    bestCellId = cellId;
+                    break;
+                }
+            }
+            handlePlayerMove(bestCellId);
+        }
+
+        // Инициализация игры
+        const playerSymbol = 'X';
+        newGame();
+        computerMove();
+
+        // Обработка кликов по клеткам
+        document.addEventListener('click', function (event) {
+            const cellId = event.target.id;
+            if (cellId) {
+                handlePlayerMove(cellId);
+            }
+        });
+    </script>
+
+</body>
+
+</html>
