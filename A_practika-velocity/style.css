@@ -17,8 +17,20 @@ p {
     line-height: 1.8;
 }
 
+
+.hide {
+    display: none !important;
+}
+
+
 .header {
     padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #ffffff;
+    z-index: 100;
 }
 
 
@@ -59,6 +71,7 @@ p {
 
 .main {}
 
+/* ------------------------------------------------- */
 .welcome {
     min-height: 600px;
     height: 100vh;
@@ -75,7 +88,6 @@ p {
     background-position: center;
 }
 
-.container {}
 
 .welcome__heading {
     margin-bottom: 100px;
@@ -85,16 +97,26 @@ p {
     text-transform: uppercase;
 }
 
-.welcome__links > * + * {
+.welcome__links>*+* {
     margin-left: 20px;
 }
 
 .link-primary {
+    display: inline-block;
     padding: 11px 30px;
     font-size: 16px;
     text-transform: uppercase;
     background: #69B9FF;
     border-radius: 4px;
+    transition: background-color 0.4s;
+}
+
+.link-primary:hover {
+    background-color: #7cc2ff;
+}
+
+.link-primary:active {
+    background-color: #0f8fff;
 }
 
 .link {
@@ -105,4 +127,100 @@ p {
     text-transform: uppercase;
     border: 1px solid #fff;
     border-radius: 4px;
+    transition: background-color 0.4s, border-color 0.4s;
+}
+
+.link:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.5);
+}
+
+.link:active {
+    background-color: rgba(0, 0, 0, 0.3);
+    border-color: rgba(0, 0, 0, 0.5);
+}
+
+/* ---------------------------------------- */
+.about {}
+
+.common-section {
+    text-align: center;
+    padding: 80px 0;
+}
+
+.container {}
+
+.title-wrapper {
+    margin-bottom: 60px;
+}
+
+.title {
+    font-size: 30px;
+    line-height: 1.2;
+
+    letter-spacing: 5px;
+    text-transform: uppercase;
+
+    color: #676770;
+    margin-bottom: 17px;
+}
+
+.subtitle {
+    font-size: 17px;
+    line-height: 1.2;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #8E8E9C;
+}
+
+.about .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.about .card {
+padding: 35px 15px 20px 15px;
+width: 300px;
+border: 1px solid #DCEBF7;
+border-radius: 5px;
+}
+
+
+.about .card img {
+    width: 94px;
+    height: 94px;
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+.about .card h4 {
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 7px;
+    color: #676770;
+}
+
+/* ---------------------------------------- */
+
+
+.services {
+}
+.common-section {
+}
+.common-section--dark {
+}
+.container {
+}
+.title-wrapper {
+}
+.title {
+}
+.subtitle {
+}
+.cards-wrapper {
+}
+.card {
 }
