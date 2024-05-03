@@ -1,0 +1,46 @@
+body {
+    font-family: "Open Sans", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+}
+
+.container {
+    max-width: 950%;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.header {
+    padding: 30px 30px;
+    width: 100%;
+    background: #fffcf5;
+    box-shadow: 0px 0px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    font-size: 30px;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #b4a87d;
+    text-shadow: rgb(199 156 0) 1px -1px 3px;
+    margin-left: auto;
+    margin-right: -40px;
+
+}
+
+.header__nav {
+    margin-left: auto;
+}
+
+.header__nav ul {
+    display: flex;
+}
+
+.header__nav li+li {
+    margin-left: 25px;
+}
