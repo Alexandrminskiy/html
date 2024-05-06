@@ -5,7 +5,7 @@ body {
 }
 
 .container {
-    max-width: 950%;
+    max-width: 970px;
     padding: 0 15px;
     margin: 0 auto;
 }
@@ -43,4 +43,10 @@ body {
 
 .header__nav li+li {
     margin-left: 25px;
+}
+
+.wallpepers__item img {
+    width: 100%;
+    max-height: 820px;
+
 }
